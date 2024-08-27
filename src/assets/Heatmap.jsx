@@ -5,14 +5,12 @@ const Heatmap = () => {
     const canvasRef = useRef(null);
 
     useEffect(() => {
-        // Fetch the heatmap data from the backend
         fetch('http://localhost:5000/api/heatmap/regresar')
             .then(response => response.json())
             .then(data => setHeatmapData(data));
     }, []);
 
     useEffect(() => {
-        // Paint the heatmap on the canvas
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
 
@@ -35,7 +33,7 @@ const Heatmap = () => {
 
     const paintHeatmap = (ctx, x, y, color) => {
         ctx.fillStyle = color;
-        ctx.fillRect(x, y, 7, 7); // Dibuja un rectángulo pequeño en la coordenada (x, y)
+        ctx.fillRect(x, y, 7, 7); // Rectángulo pequeño en la coordenada (x, y)
     };
 
     return (
