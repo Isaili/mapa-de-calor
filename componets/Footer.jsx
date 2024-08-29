@@ -17,7 +17,7 @@ const footerStyle = {
     textAlign: 'center',
     backgroundColor: '#f1f1f1',
     borderTop: '1px solid #ddd',
-    zIndex: '0', // Asegúrate de que esté debajo del Header
+    zIndex: '10', 
 };
 
 export default Footer;

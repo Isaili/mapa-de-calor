@@ -20,7 +20,7 @@ const headerStyle = {
   textAlign: 'center',
   position: 'fixed',
   width: '100%',
-  zIndex: '0', // Asegúrate de que esté encima de otros elementos
+  zIndex: '10', 
 };
 
 export default Header;

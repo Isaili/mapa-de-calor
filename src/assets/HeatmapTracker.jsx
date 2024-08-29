@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 
 const getSection = (event) => {
     const element = document.elementFromPoint(event.clientX, event.clientY);
-    if (!element) return 'unknown';
+    if (!element) return 'main';
 
     if (element.closest('.header')) return 'header';
     if (element.closest('.main')) return 'main';
     if (element.closest('.footer')) return 'footer';
 
-    return 'unknown';
+    return 'main';
 };
 
 const HeatmapTracker = () => {
@@ -52,7 +52,7 @@ const HeatmapTracker = () => {
         }).catch((error) => console.error('Error sending heatmap data:', error));
     };
 
-    return null; // Este componente no renderiza nada visualmente
+    return null; 
 };
 
 export default HeatmapTracker;
